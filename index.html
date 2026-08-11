@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sharma Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="loader">
+    <div class="loader-content">
+        <div class="pulse">
+            🩺
+        </div>
+        <h1>Dr. Sharma Clinic</h1>
+        <p>Caring for Your Health...</p>
+        <div class="loading-bar">
+            <span></span>
+        </div>
+    </div>
+</div>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image.png" >
+            <span>Dr. Sharma Clinic</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctor">Doctor</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#appointment">Appointment</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Welcome to <span>Dr. Sharma Clinic & Diagnostic Centre</span></h1>
+        <p> Providing quality healthcare with compassion, advanced treatment and personalized care for every patient.</p>
+
+    <div class="hero-buttons">
+    <!-- WhatsApp Appointment -->
+        <a href="#appointment" class="btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            Book via WhatsApp
+        </a>
+    <!-- Call Appointment -->
+        <a href="tel:+919111177991" class="btn call-btn">
+            <i class="fas fa-phone"></i>
+            Call for Appointment
+        </a>
+    </div>
+
+
+    </div>
+    <div class="hero-image"> <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=700" alt="Doctor"></div>
+</section>
+
+<section class="status-section">
+    <h2 class="title">Doctor Availability</h2>
+    <p>Clinic Timing:<br> All day : 6:00PM - 8:30PM<br> Sunday :   10AM - 12AM<br><br>Thursday OFF
+    </p>
+    <p id="status"></p>
+</section>
+
+<section class="about" id="about">
+    <h2 class="title">About Our Clinic</h2>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="prizes.jpeg" alt="Clinic">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700" alt="Clinic">
+        </div>
+        
+        <div class="about-text">
+            <h3>🩺 Your Health, Our Commitment</h3>
+            <p> Dr. Sharma Clinic offers comprehensive medical consultation with modern facilities and experienced doctor.</p>
+            <p> Our mission is to provide affordable and high-quality healthcare in a comfortable environment.</p>
+            <ul>
+                <li>🩺 Comprehensive General & Internal Medicine Consultation</li>
+                <li>❤️ Hypertension & Heart Disease Management</li>
+                <li>🩸 Diabetes & Thyroid Disorder Management</li>
+                <li>🫁 Respiratory & Chest Disease Care</li>
+                <li>🧠 Neurological & Stroke-related Consultation</li>
+                <li>🦠 Fever, Infections & Acute Illness Management</li>
+                <li>🧪 Preventive Health Check-ups & Screening</li>
+                <li>📊 ECG & Basic Diagnostic Evaluation</li>
+                <li>🩺 Chronic Disease Management & Follow-up</li>
+                <li>💊 Medication Review & Rational Prescription</li>
+                <li>🏥 Day-care Procedures & Minor Medical Procedures</li>
+                <li>👨‍⚕️ Pre-operative Medical Evaluation</li>
+                <li>🚑 Urgent Medical Assessment & Stabilization</li>
+                <li>🥗 Lifestyle, Diet & Weight-management Counseling</li>
+                <li>🧓 Geriatric & Multimorbidity Care</li>
+                <li>👩‍⚕️ Women’s Health & Common Medical Disorders</li>
+                <li>🔬 Laboratory & Diagnostic Test Guidance</li>
+                <li>📋 Second Opinion & Complex Case Consultation</li>
+            </ul>
+            <h4>💠 SPECIAL FOCUS - Heart, Liver & Kidney Diseases</h4>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2 class="title">Our Services</h2>
+    <div class="service-container">
+        <div class="card">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>General Consultation</h3>
+            <p>Expert diagnosis and treatment.</p>
+        </div>
+    <div class="card">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Heart Checkup</h3>
+        <p>Routine heart monitoring.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-syringe"></i>
+        <h3>Vaccination</h3>
+        <p>All age vaccination services.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-stethoscope"></i>
+        <h3>Health Checkup</h3>
+        <p>Complete body checkup.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-truck-medical"></i>
+        <h3>Emergency Care</h3>
+        <p>Immediate medical assistance.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-pills"></i>
+        <h3>Medicine Advice</h3>
+        <p>Professional consultation.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-bacteria"></i>
+        <h3>Fever & Infection</h3>
+        <p>Acute Illness Management.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>ECG</h3>
+        <p>Basic Diagnostic Evaluation.</p>
+    </div>
+</div>
+</section>
+
+<section class="doctor" id="doctor">
+    <h2 class="title">Meet Our Doctor</h2>
+    <div class="doctor-box"><img src="drphoto.jpeg">
+        <div>
+            <h3>Dr. Prashant Sharma</h3>
+            <p><strong>MBBS, MD (Medicine)</strong></p>
+            <p>Consultant Physician and Assistant Professor with expertise in Internal Medicine and comprehensive management of adult medical disorders. He holds an MBBS, MD (Medicine), CPCDM and MIMA, with professional experience at reputed institutions </p>
+            <ul>
+                <li>Formerly at AIIMS, New Delhi</li>
+                <li>Formerly at Safdarjung Hospital, New Delhi</li>
+                <li>Formerly at MMG Hospital, Ghaziabad</li>
+            </ul>
+            <p>He provides evidence-based consultation for diabetes, hypertension, thyroid disorders, cardiovascular and respiratory diseases, infections, neurological conditions, lifestyle-related disorders and other acute and chronic medical conditions. His approach focuses on accurate diagnosis, rational treatment, preventive healthcare and personalized long-term management, with an emphasis on compassionate and patient-centred care.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2 class="title">Clinic Gallery</h2>
+    <div class="gallery-container">
+        <img src="clinic.jpeg">
+        <img src="WhatsApp Image 2026-08-08 at 8.42.36 PM.jpeg">
+        <img src="appointment.jpeg">
+        <img src="ecg.jpeg">
+        <img src="WhatsApp Image 2026-08-08 at 8.42.37 PM.jpeg">
+        <img src="prizes.jpeg">
+    </div>
+</section>
+
+<section class="tips">
+    <h2>Health Tips</h2>
+    <div id="tipsBox">Drink 8-10 glasses of water daily.</div>
+</section>
+
+<!-- ================= APPOINTMENT ================= -->
+
+<section id="appointment">
+    <h2 class="title">Book Appointment</h2>
+    <form id="appointmentForm">
+        <input
+            type="text"
+            id="name"
+            placeholder="Patient Name"
+            required
+        >
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+        >
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number"
+            required
+        >
+        <input
+            type="date"
+            id="date"
+            required
+        >
+        <textarea
+            id="message"
+            placeholder="Describe your problem"
+            required
+        ></textarea>
+        <button type="submit">
+            <i class="fab fa-whatsapp"></i>
+            Send Message on WhatsApp
+        </button>
+    </form>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="title">Contact Us</h2>
+    <div class="contact-container">
+        <div>
+            <h3>Clinic Address</h3>
+            <p>📍 Near Jalebi Chowk & Sheetla Mata Mandir, New Vijay Nagar, Ghaziabad (U.P.)</p>
+            <p>📞 +91 91111 77991</p>
+            <p>✉ sheeladevifoundationtrust@gmail.com</p>
+        </div>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2046.4709575289817!2d77.4249073509149!3d28.64229269950553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef0050ae67a5%3A0x89acf1669a141764!2sDr.%20Prashant%20Sharma!5e0!3m2!1sen!2sin!4v1783619205562!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <!-- Scrolling Information Bar -->
+    <div class="footer-marquee">
+        <div class="marquee-content">
+            📧 sheeladevifoundationtrust@gmail.com
+            &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+            📞 Book Appointment: +91 91111 77991
+            &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+            🕒 Clinic Hours:
+            Mon-Sat  6 : 00 PM - 8 : 30 PM
+            &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+            Sunday: 10 : 00 AM - 12 : 00 PM
+            &nbsp;&nbsp;&nbsp; |   Thursday OFF
+            &nbsp;&nbsp;&nbsp; |   &nbsp;&nbsp;&nbsp;
+            Welcome to Dr. Sharma Clinic & Diagnostic Centre
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h3>Dr. Sharma Clinic</h3>
+            <p>
+                Providing quality healthcare with compassion,
+                advanced treatment and personalized care.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/drsharmaclinic?igsh=MTZra3B1emJ3bWwybw=="><i class="fab fa-instagram"></i></a>OUR INSTAGRAM PAGE
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <p>
+                <i class="fas fa-phone"></i>
+                +91 91111 77991
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i>
+                sheeladevifoundationtrust@gmail.com
+            </p>
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Near Jalebi Chowk & Sheetla Mata Mandir,New Vijay Nagar, Ghaziabad (U.P.)
+            </p>
+        </div>
+        <div class="footer-box">
+            <h3>Working Hours</h3>
+            <p>Monday - Saturday</p>
+            <p>6:00 PM - 9:00 PM</p>
+            <br>
+            <p>Sunday</p>
+            <p>10:00 AM - 12:00 PM</p>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 Dr. Sharma Clinic & Diagnostic Centre |
+        All Rights Reserved
+    </div>
+</footer>
+
+<a href="https://whatsapp.com/channel/0029Vb6Q9gWDzgTEWa7qQi1V" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+<button id="topBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+<script src="script.js"></script>
+</body>
+</html>

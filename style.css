@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background:#f4faff;
+    color:#333;
+    overflow-x:hidden;
+}
+img{
+    width:100%;
+    display:block;
+}
+a{
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+}
+section{
+    padding:80px 8%;
+}
+.title{
+    text-align:center;
+    font-size:38px;
+    color:#0b6fa4;
+    margin-bottom:50px;
+    position:relative;
+}
+.title::after{
+    content:"";
+    width:90px;
+    height:4px;
+    background:#19b5fe;
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:5px;
+}
+/* =========================
+      Loading Screen
+========================= */
+#loader{
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg,#0f4c81,#2d9cdb,#d9f3ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:opacity .8s ease, visibility .8s ease;
+}
+.loader-content{
+    text-align:center;
+    color:white;
+}
+.loader-content h1{
+    margin-top:20px;
+    font-size:42px;
+    letter-spacing:1px;
+}
+.loader-content p{
+    margin:15px 0 30px;
+    font-size:18px;
+    opacity:.9;
+}
+/* Pulse Circle */
+.pulse{
+    width:120px;
+    height:120px;
+    margin:auto;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    animation:pulse 1.5s infinite;
+    box-shadow:0 0 25px rgba(255,255,255,.5);
+}
+/* Progress Bar */
+.loading-bar{
+    width:260px;
+    height:8px;
+    background:rgba(255,255,255,.3);
+    border-radius:50px;
+    overflow:hidden;
+    margin:auto;
+}
+.loading-bar span{
+    display:block;
+    width:0;
+    height:100%;
+    background:white;
+    border-radius:50px;
+    animation:loading 3s linear forwards;
+}
+/* Animations */
+@keyframes loading{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 15px rgba(255,255,255,.5);
+    }
+    50%{
+        transform:scale(1.12);
+        box-shadow:0 0 45px rgba(255,255,255,.9);
+    }
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 15px rgba(255,255,255,.5);
+    }
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    z-index:1000;
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:26px;
+    font-weight:700;
+    color:#0a7bb8;
+}
+.logo img{
+    width:100px;
+    max-width: fit-content;
+    height: 100px;
+    object-fit: cover;
+}
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+.nav-links a{
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+.nav-links a:hover{
+    color:#0b9ddf;
+}
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+.hero{
+    margin-top:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    min-height:90vh;
+    background:linear-gradient(135deg,#d7f1ff,#ffffff,#e8f8ff);
+}
+.hero-content{
+    flex:1;
+}
+.hero-content h1{
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+.hero-content span{
+    color:#0c9ae4;
+}
+.hero-content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+    color:#555;
+}
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#0b9ddf;
+    color:#fff;
+    border-radius:50px;
+    transition:.4s;
+    font-weight:600;
+}
+.btn:hover{
+    background:#056ea0;
+    transform:translateY(-4px);
+}
+.hero-image{
+    flex:1;
+}
+.hero-image img{
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+.status-section{
+    text-align:center;
+    background:#fff;
+}
+.status-section h2{
+    font-size:35px;
+    color:#0b7fb5;
+    margin-bottom:20px;
+}
+.status-section pre{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    color: #03608f;
+}
+#status{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:40px;
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
+}
+.about{
+    background:#eef9ff;
+}
+.about-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+.about-image{
+    flex:1;
+}
+.about-image img{
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    padding:10px;
+    margin-bottom: 10px;
+}
+.about-text{
+    flex:1;
+}
+.about-text h3{
+    font-size:32px;
+    color:#0b7fb5;
+    margin-bottom:20px;
+}
+.about-text p{
+    margin-bottom:20px;
+    line-height:1.8;
+    color:#555;
+}
+.about-text ul li{
+    margin:15px 0;
+    font-size:18px;
+    list-style: circle;
+    color:#444;
+}
+.services{
+    background:#fff;
+}
+.service-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.card{
+    background:#fff;
+    border-radius:18px;
+    text-align:center;
+    padding:35px 25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+.card i{
+    font-size:55px;
+    color:#0aa5f0;
+    margin-bottom:20px;
+}
+.card h3{
+    margin-bottom:15px;
+    color:#0b7fb5;
+}
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+@media(max-width:992px){
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+.hero-content h1{
+    font-size:42px;
+}
+.about-container{
+    flex-direction:column;
+}
+}
+@media(max-width:768px){
+.menu-btn{
+    display:block;
+}
+.nav-links{
+    position:absolute;
+    top:80px;
+    left:-100%;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    text-align:center;
+    transition:.4s;
+    padding:20px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+.nav-links.active{
+    left:0;
+}
+.hero{
+    padding-top:30px;
+}
+.hero-content h1{
+    font-size:35px;
+}
+.hero-content p{
+    font-size:16px;
+}
+.title{
+    font-size:30px;
+}
+.card{
+    padding:30px 20px;
+}
+}
+@media(max-width:500px){
+.hero-content h1{
+    font-size:28px;
+}
+.logo{
+    font-size:20px;
+}
+.logo i{
+    font-size:22px;
+}
+.btn{
+    padding:12px 25px;
+}
+.about-text h3{
+    font-size:25px;
+}
+.about-text ul li{
+    font-size:16px;
+}
+.about-text h4{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+}
+.doctor{
+    background:#eef9ff;
+}
+.doctor-box{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:40px;
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    flex-wrap:wrap;
+}
+.doctor-box img{
+    width:320px;
+    border-radius:20px;
+    object-fit:cover;
+}
+.doctor-box h3{
+    color:#0b7fb5;
+    font-size:32px;
+    margin-bottom:10px;
+}
+.doctor-box p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+.doctor-box ul{
+    margin-top:15px;
+    list-style-position:outside;
+}
+.doctor-box ul li{
+    margin:10px 0;
+    list-style-type:circle;
+}
+.gallery{
+    background:#fff;
+}
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.gallery-container img{
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.gallery-container img:hover{
+    transform:scale(1.05);
+}
+
+/*==========================
+        HEALTH TIPS
+===========================*/
+
+.tips{
+    background:linear-gradient(135deg,#0aa5f0,#30c5ff);
+    color:#fff;
+    text-align:center;
+}
+
+.tips h2{
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+#tipsBox{
+    background:#fff;
+    color:#333;
+    max-width:700px;
+    margin:auto;
+    padding:25px;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:500;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* ==============================
+   APPOINTMENT FORM
+============================== */
+#appointment {
+    background: linear-gradient(135deg, #eefaff, #ffffff);
+}
+#appointmentForm {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+/* Input, Select and Textarea */
+
+#appointmentForm input,
+#appointmentForm select,
+#appointmentForm textarea {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #d5dfe5;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    background: #fafdff;
+    transition: 0.3s;
+}
+/* Focus Effect */
+#appointmentForm input:focus,
+#appointmentForm select:focus,
+#appointmentForm textarea:focus {
+    border-color: #0aa5f0;
+    box-shadow:
+        0 0 0 3px rgba(10, 165, 240, 0.12);
+    background: #ffffff;
+}
+/* Textarea */
+#appointmentForm textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+/* WhatsApp Button */
+#appointmentForm button {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #25D366;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+/* WhatsApp Icon */
+#appointmentForm button i {
+    font-size: 22px;
+}
+/* Hover */
+#appointmentForm button:hover {
+    background: #1ebe5d;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 20px rgba(37, 211, 102, 0.30);
+}
+
+/* Click */
+#appointmentForm button:active {
+    transform: translateY(0);
+}
+/* ==============================
+   MOBILE APPOINTMENT FORM
+============================== */
+@media (max-width: 600px) {
+    #appointmentForm {
+        padding: 25px 18px;
+        border-radius: 15px;
+    }
+    #appointmentForm input,
+    #appointmentForm select,
+    #appointmentForm textarea {
+        font-size: 15px;
+        padding: 13px 15px;
+    }
+    #appointmentForm button {
+        font-size: 15px;
+        padding: 14px 10px;
+    }
+    #appointmentForm button i {
+        font-size: 20px;
+    }
+}
+/*==========================
+        CONTACT
+===========================*/
+
+.contact{
+    background:#fff;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    align-items:center;
+}
+
+.contact-container h3{
+    color:#0b7fb5;
+    margin-bottom:20px;
+}
+
+.contact-container p{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+.contact iframe{
+    width:100%;
+    height:350px;
+    border:none;
+    border-radius:15px;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:linear-gradient(135deg,#0688c8,#1eb6f3);          /* Use your website's footer color */
+    color:#fff;
+    margin-top:60px;
+}
+.footer-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:55px 0 35px;
+}
+.footer-box{
+    flex:1;
+    min-width:260px;
+}
+.footer-box h3{
+    margin-bottom:18px;
+    font-size:22px;
+    color:#fff;
+}
+.footer-box p{
+    margin:10px 0;
+    color:#d7e5f1;
+    line-height:1.7;
+}
+.footer-box i{
+    margin-right:10px;
+    color:#6dd5ed;
+}
+.social-icons{
+    margin-top:20px;
+}
+.social-icons a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:rgba(255,255,255,.1);
+    color:white;
+    margin-right:10px;
+    font-size:18px;
+    transition:.3s;
+}
+.social-icons a:hover{
+    background:#22c1c3;
+    transform:translateY(-5px);
+}
+/* ================= MARQUEE ================= */
+.footer-marquee{
+    background:#96ddf9;      /* Slightly lighter than footer */
+    overflow:hidden;
+    white-space:nowrap;
+    padding:12px 0;
+}
+.marquee-content{
+    display:inline-block;
+    padding-left:100%;
+    animation:scrollLeft 25s linear infinite;
+    color:rgb(51, 152, 225);
+    font-size:15px;
+    font-weight:500;
+}
+@keyframes scrollLeft{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+/* ================= COPYRIGHT ================= */
+.copyright{
+    text-align:center;
+    background:#082945;
+    padding:18px;
+    color:#ddd;
+    font-size:15px;
+    letter-spacing:.5px;
+}
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+.footer-container{
+    flex-direction:column;
+    text-align:center;
+}
+.social-icons{
+    justify-content:center;
+}
+}
+
+/*==========================
+    WHATSAPP BUTTON
+===========================*/
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    z-index:999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/*==========================
+    BACK TO TOP
+===========================*/
+
+#topBtn{
+    position:fixed;
+    bottom:100px;
+    right:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    background:#0aa5f0;
+    color:#fff;
+    border-radius:50%;
+    cursor:pointer;
+    display:none;
+    font-size:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+#topBtn:hover{
+    background:#056ea0;
+}
+
+/*==========================
+      ANIMATIONS
+===========================*/
+
+.hero-content,
+.hero-image,
+.card,
+.doctor-box,
+.review,
+.gallery-container img{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/*==========================
+      RESPONSIVE
+===========================*/
+
+@media(max-width:768px){
+
+.doctor-box{
+    flex-direction:column;
+    text-align:center;
+}
+
+.doctor-box img{
+    width:100%;
+}
+
+.review{
+    padding:25px;
+}
+
+.review p{
+    font-size:17px;
+}
+
+#tipsBox{
+    font-size:17px;
+}
+
+.whatsapp{
+    width:55px;
+    height:55px;
+    font-size:28px;
+}
+
+#topBtn{
+    width:45px;
+    height:45px;
+}
+
+.contact iframe{
+    height:280px;
+}
+
+}
+
+@media(max-width:500px){
+
+.title{
+    font-size:28px;
+}
+
+.doctor-box h3{
+    font-size:26px;
+}
+
+.review p{
+    font-size:16px;
+}
+
+#appointmentForm input,
+#appointmentForm textarea,
+#appointmentForm select{
+    font-size:15px;
+}
+
+#appointmentForm button{
+    font-size:16px;
+}
+
+.faq-btn{
+    font-size:16px;
+}
+
+}
+
+
+/* ==============================
+   HERO APPOINTMENT BUTTONS
+============================== */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+/* Common button styling */
+.hero-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 25px;
+}
+/* WhatsApp Button */
+.hero-buttons .whatsapp-btn {
+    background: #25D366;
+}
+.hero-buttons .whatsapp-btn:hover {
+    background: #1ebe5d;
+}
+/* Call Button */
+.hero-buttons .call-btn {
+    background: #0b7fb5;
+}
+.hero-buttons .call-btn:hover {
+    background: #075d87;
+}
+/* Icons */
+.hero-buttons i {
+    font-size: 18px;
+}
+/* ==============================
+   MOBILE
+============================== */
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
